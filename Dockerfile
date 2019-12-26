@@ -66,5 +66,4 @@ RUN cd ~ && mkdir -p .pip \
 WORKDIR /data
 VOLUME ["/data"]
 EXPOSE 80
-
-
+CMD ["bash"]
