@@ -20,6 +20,7 @@ RUN apt-get clean && apt-get update && apt-get install -y tzdata \
     && dpkg-reconfigure -f $DEBIAN_FRONTEND tzdata \
     && apt-get install -y iproute2 \
     vim \
+    curl \
     build-essential \
     libevent-dev \
     checkinstall \
