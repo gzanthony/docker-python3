@@ -57,13 +57,6 @@ RUN rm -f /usr/bin/python3 && rm -f /usr/bin/pip3 \
     && ln -sf /usr/local/python3/bin/python3.7 /usr/bin/python3 \
     && ln -sf /usr/local/python3/bin/pip3.7 /usr/bin/pip3
 
-RUN cd ~ && mkdir -p .pip \
-    && echo "[global]" > .php/pip.conf \
-    && echo "index-url=http://mirrors.aliyun.com/pypi/simple/" >> .pip/pip.conf \
-    && echo " " >> .pip/pip.conf \
-    && echo "[install]" >> .pip/pip.conf \
-    && echo "trusted-host=mirrors.aliyun.com" >> .pip/pip.conf
-
 WORKDIR /data
 VOLUME ["/data"]
 EXPOSE 80
